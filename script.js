@@ -100,6 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     requestAnimationFrame(step);
   }
+
+  // splash intro removal after animation
+  const splash = document.getElementById('splash');
+  if (splash) {
+    // remove after animation completes (1.8s)
+    setTimeout(() => {
+      splash.remove();
+    }, 1850);
+  }
 });
 
 

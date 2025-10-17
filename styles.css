@@ -21,8 +21,8 @@
 }
 /* Splash intro */
 #splash { position: fixed; inset: 0; background: #000; display: grid; place-items: center; z-index: 999; pointer-events: none; }
-.splash-logo { width: 90px; height: 90px; object-fit: cover; border-radius: 14px; box-shadow: var(--glow); opacity: 0; transform: scale(0.7); animation: splashZoom 1.8s cubic-bezier(.2,.7,.2,1) forwards; }
-@keyframes splashZoom { 0% { opacity: 0; transform: scale(0.7); } 20% { opacity: 1; } 70% { opacity: 1; transform: scale(12); filter: blur(1px); } 100% { opacity: 0; transform: scale(14); filter: blur(2px); } }
+.splash-logo { width: 120px; height: 120px; object-fit: cover; border-radius: 14px; box-shadow: var(--glow); opacity: 0; transform: translateZ(0) scale(0.8); backface-visibility: hidden; will-change: transform, opacity; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; animation: splashZoom 1.8s cubic-bezier(.2,.7,.2,1) forwards; }
+@keyframes splashZoom { 0% { opacity: 0; transform: translateZ(0) scale(0.8); } 20% { opacity: 1; } 70% { opacity: 1; transform: translateZ(0) scale(10); } 100% { opacity: 0; transform: translateZ(0) scale(12); } }
 
 
 * { box-sizing: border-box; }

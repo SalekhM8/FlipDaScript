@@ -120,6 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1850);
     // add blur class while splash is active
     document.body.classList.add('splash-active');
+
+    // ensure CSS backdrop-filter is applied by forcing paint
+    requestAnimationFrame(() => {
+      splash.style.willChange = 'opacity, transform';
+    });
   }
 });
 

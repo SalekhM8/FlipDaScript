@@ -113,18 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // splash intro removal after animation
   const splash = document.getElementById('splash');
   if (splash) {
+    // add blur class immediately so page is blurred under splash
+    document.body.classList.add('splash-active');
     // remove after animation completes (1.8s)
     setTimeout(() => {
-      splash.remove();
       document.body.classList.remove('splash-active');
+      splash.remove();
     }, 1850);
-    // add blur class while splash is active
-    document.body.classList.add('splash-active');
-
-    // ensure CSS backdrop-filter is applied by forcing paint
-    requestAnimationFrame(() => {
-      splash.style.willChange = 'opacity, transform';
-    });
   }
 });
 

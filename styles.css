@@ -1,3 +1,7 @@
+/* Shared offerings background wrapper */
+.offerings { position: relative; }
+.offerings::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.78)), url('./advice.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.92); z-index: 0; }
+.offerings > section { position: relative; z-index: 1; }
 /*
   Flip Da Script CIC Landing
   Color scheme from poster: yellow (#F9C200 range) and black. Whites for contrast.
@@ -136,9 +140,6 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 #workshops > .container { position: relative; z-index: 1; }
 
 #support { position: relative; }
-#support::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.0) 100%), url('./advice.png') center top/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.92); z-index: 0; }
-#support > .container { position: relative; z-index: 1; }
-/* remove harsh seam by fading to transparent at bottom (handled above) */
 /* Feature cards */
 .feature-cards { padding: 8px 0 26px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

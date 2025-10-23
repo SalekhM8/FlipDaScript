@@ -21,7 +21,7 @@
 }
 /* Splash intro */
 #splash { position: fixed; inset: 0; background: transparent; display: grid; place-items: center; z-index: 999; pointer-events: none; }
-#splash::before { content: ""; position: absolute; inset: 0; background: #000; opacity: 0.65; animation: splashBackdrop 1.8s ease forwards; }
+#splash::before { content: ""; position: absolute; inset: 0; backdrop-filter: blur(8px); background: rgba(0,0,0,0.55); animation: splashBackdrop 1.8s ease forwards; }
 .splash-fill { position: absolute; width: 120px; height: 120px; border-radius: 16px; background: #000; box-shadow: 0 0 0 2px rgba(255,255,255,0.08) inset, 0 20px 60px rgba(0,0,0,0.6); transform: translateZ(0) scale(0.9); opacity: 0; animation: splashFill 1.8s cubic-bezier(.2,.7,.2,1) forwards; }
 .splash-logo { width: 280px; height: 280px; object-fit: contain; opacity: 0; transform: translateZ(0) scale(0.6); backface-visibility: hidden; will-change: transform, opacity; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; animation: splashLogo 1.8s ease forwards; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5)); }
 @keyframes splashFill { 0% { opacity: 0; transform: translateZ(0) scale(0.9); } 20% { opacity: 1; } 70% { opacity: 1; transform: translateZ(0) scale(22); } 100% { opacity: 0; transform: translateZ(0) scale(24); } }
@@ -130,6 +130,14 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 .section-head h2 { margin: 0; font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
 .section-head p { margin: 0; color: var(--muted); }
 
+/* Section backgrounds (all viewports) */
+#workshops { position: relative; }
+#workshops::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.78)), url('./workshop.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.9); z-index: 0; }
+#workshops > .container { position: relative; z-index: 1; }
+
+#support { position: relative; }
+#support::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.52), rgba(0,0,0,0.82)), url('./advice.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.9); z-index: 0; }
+#support > .container { position: relative; z-index: 1; }
 /* Feature cards */
 .feature-cards { padding: 8px 0 26px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -195,15 +203,6 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
   .hero-badges { text-align: center; }
   .hero-curve { display: none; }
   .hero::before { background: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.64)), url('./mainhero.png') center/cover no-repeat; filter: brightness(0.82); background-size: 100% 100%, 185% auto; background-position: center, center 70%; }
-
-/* Section backgrounds */
-#workshops { position: relative; }
-#workshops::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.78)), url('./workshop.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.9); z-index: 0; }
-#workshops > .container { position: relative; z-index: 1; }
-
-#support { position: relative; }
-#support::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.52), rgba(0,0,0,0.82)), url('./advice.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.9); z-index: 0; }
-#support > .container { position: relative; z-index: 1; }
 }
 
 @media (min-width: 1120px) {

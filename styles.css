@@ -133,7 +133,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 /* Feature cards */
 .feature-cards { padding: 8px 0 26px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.feature-card { background: rgba(255,255,255,0.035); backdrop-filter: saturate(140%) blur(12px); border-radius: 28px; border: 1px solid rgba(255,255,255,0.22); padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.35); transition: box-shadow 220ms ease, transform 220ms ease, border-color 220ms ease, background 220ms ease; }
+.feature-card { background: rgba(255,255,255,0.02); backdrop-filter: saturate(140%) blur(8px); border-radius: 28px; border: 1px solid rgba(255,255,255,0.18); padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.35); transition: box-shadow 220ms ease, transform 220ms ease, border-color 220ms ease, background 220ms ease; }
 .feature-card:hover { border-color: rgba(247,196,0,0.55); box-shadow: var(--glow); transform: translateY(-2px); }
 .feature-card .icon { font-size: 26px; background: transparent; border-radius: 0; width: 48px; height: 48px; display: grid; place-items: center; margin: 0 auto 8px; color: var(--brand); }
 .feature-card .icon svg { width: 28px; height: 28px; display: block; }
@@ -147,7 +147,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 /* Details pills row */
 .details { padding: 10px 0 28px; }
 .details-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.detail-pill { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.04); backdrop-filter: saturate(140%) blur(12px); border: 1px solid rgba(255,255,255,0.22); border-radius: var(--radius-pill); padding: 12px 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.35); transition: box-shadow 180ms ease, border-color 180ms ease, background 180ms ease; }
+.detail-pill { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.03); backdrop-filter: saturate(140%) blur(8px); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-pill); padding: 12px 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.35); transition: box-shadow 180ms ease, border-color 180ms ease, background 180ms ease; }
 .detail-pill:hover { border-color: rgba(247,196,0,0.5); box-shadow: var(--glow); }
 .pill-icon { font-size: 18px; color: var(--brand); display: inline-grid; place-items: center; }
 .pill-label { font-size: 0.86rem; color: var(--muted); }

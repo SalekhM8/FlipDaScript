@@ -23,9 +23,9 @@
 #splash { position: fixed; inset: 0; background: transparent; display: grid; place-items: center; z-index: 999; pointer-events: none; }
 #splash::before { content: ""; position: absolute; inset: 0; background: #000; opacity: 0.65; animation: splashBackdrop 1.8s ease forwards; }
 .splash-fill { position: absolute; width: 120px; height: 120px; border-radius: 16px; background: #000; box-shadow: 0 0 0 2px rgba(255,255,255,0.08) inset, 0 20px 60px rgba(0,0,0,0.6); transform: translateZ(0) scale(0.9); opacity: 0; animation: splashFill 1.8s cubic-bezier(.2,.7,.2,1) forwards; }
-.splash-logo { width: 160px; height: 160px; object-fit: contain; opacity: 0; transform: translateZ(0) scale(1); backface-visibility: hidden; will-change: opacity; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; animation: splashLogo 1.8s ease forwards; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5)); }
+.splash-logo { width: 280px; height: 280px; object-fit: contain; opacity: 0; transform: translateZ(0) scale(0.6); backface-visibility: hidden; will-change: transform, opacity; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; animation: splashLogo 1.8s ease forwards; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5)); }
 @keyframes splashFill { 0% { opacity: 0; transform: translateZ(0) scale(0.9); } 20% { opacity: 1; } 70% { opacity: 1; transform: translateZ(0) scale(22); } 100% { opacity: 0; transform: translateZ(0) scale(24); } }
-@keyframes splashLogo { 0% { opacity: 0; } 25% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes splashLogo { 0% { opacity: 0; transform: translateZ(0) scale(0.6); } 20% { opacity: 1; } 75% { opacity: 1; transform: translateZ(0) scale(1.0); } 100% { opacity: 0; transform: translateZ(0) scale(1.05); } }
 @keyframes splashBackdrop { 0% { opacity: 0.65; } 70% { opacity: 0.35; } 100% { opacity: 0; } }
 
 

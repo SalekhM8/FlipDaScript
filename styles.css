@@ -21,7 +21,7 @@
 }
 /* Splash intro */
 #splash { position: fixed; inset: 0; background: transparent; display: grid; place-items: center; z-index: 999; pointer-events: none; }
-#splash::before { content: ""; position: absolute; inset: 0; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); background: rgba(0,0,0,0.55); animation: splashBackdrop 1.8s ease forwards; }
+#splash::before { content: ""; position: absolute; inset: 0; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(0,0,0,0.35); animation: splashBackdrop 1.8s ease forwards; }
 .splash-fill { position: absolute; width: 120px; height: 120px; border-radius: 16px; background: #000; box-shadow: 0 0 0 2px rgba(255,255,255,0.08) inset, 0 20px 60px rgba(0,0,0,0.6); transform: translateZ(0) scale(0.9); opacity: 0; animation: splashFill 1.8s cubic-bezier(.2,.7,.2,1) forwards; }
 .splash-logo { width: 280px; height: 280px; object-fit: contain; opacity: 0; transform: translateZ(0) scale(0.6); backface-visibility: hidden; will-change: transform, opacity; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; animation: splashLogo 1.8s ease forwards; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5)); }
 @keyframes splashFill { 0% { opacity: 0; transform: translateZ(0) scale(0.9); } 20% { opacity: 1; } 70% { opacity: 1; transform: translateZ(0) scale(22); } 100% { opacity: 0; transform: translateZ(0) scale(24); } }
@@ -136,9 +136,9 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 #workshops > .container { position: relative; z-index: 1; }
 
 #support { position: relative; }
-#support::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.78)), url('./advice.png') center top/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.92); z-index: 0; }
+#support::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.0) 100%), url('./advice.png') center top/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.92); z-index: 0; }
 #support > .container { position: relative; z-index: 1; }
-#support::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 72px; background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.65)); z-index: 1; pointer-events: none; }
+/* remove harsh seam by fading to transparent at bottom (handled above) */
 /* Feature cards */
 .feature-cards { padding: 8px 0 26px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -164,7 +164,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 .pill-value { font-weight: 700; }
 
 /* Location */
-.location { padding: 14px 0 80px; }
+.location { padding: 34px 0 80px; margin-top: -24px; }
 .location { position: relative; }
 .location::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('./advice.png') center/cover no-repeat; z-index: 0; filter: saturate(110%) contrast(110%) brightness(0.9); }
 .location > .container { position: relative; z-index: 1; }

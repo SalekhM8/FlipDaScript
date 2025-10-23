@@ -20,9 +20,11 @@
   --shadow-strong: 0 20px 60px rgba(0,0,0,0.55);
 }
 /* Splash intro */
-#splash { position: fixed; inset: 0; background: #000; display: grid; place-items: center; z-index: 999; pointer-events: none; }
-.splash-logo { width: 140px; height: 140px; object-fit: contain; opacity: 0; transform: translateZ(0) scale(0.8); backface-visibility: hidden; will-change: transform, opacity; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; animation: splashZoom 1.8s cubic-bezier(.2,.7,.2,1) forwards; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5)); }
-@keyframes splashZoom { 0% { opacity: 0; transform: translateZ(0) scale(0.8); } 20% { opacity: 1; } 70% { opacity: 1; transform: translateZ(0) scale(8); } 100% { opacity: 0; transform: translateZ(0) scale(10); } }
+#splash { position: fixed; inset: 0; background: transparent; display: grid; place-items: center; z-index: 999; pointer-events: none; }
+#splash::before { content: ""; position: absolute; inset: 0; background: #000; opacity: 0.65; animation: splashBackdrop 1.8s ease forwards; }
+.splash-logo { width: 160px; height: 160px; object-fit: contain; opacity: 0; transform: translateZ(0) scale(0.9); backface-visibility: hidden; will-change: transform, opacity; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; animation: splashZoom 1.8s cubic-bezier(.2,.7,.2,1) forwards; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.5)); }
+@keyframes splashZoom { 0% { opacity: 0; transform: translateZ(0) scale(0.9); } 25% { opacity: 1; } 70% { opacity: 1; transform: translateZ(0) scale(4.6); } 100% { opacity: 0; transform: translateZ(0) scale(5.2); } }
+@keyframes splashBackdrop { 0% { opacity: 0.65; } 70% { opacity: 0.35; } 100% { opacity: 0; } }
 
 
 * { box-sizing: border-box; }
@@ -37,7 +39,7 @@ body {
   scroll-behavior: smooth;
 }
 /* blur site under splash */
-body.splash-active main, body.splash-active header, body.splash-active footer { filter: blur(6px); }
+body.splash-active main, body.splash-active header, body.splash-active footer { filter: blur(6px); transform: translateZ(0); }
 .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 .skip-link:focus { left: 12px; top: 12px; width: auto; height: auto; padding: 10px 14px; background: #fff; color: #111; border-radius: var(--radius-pill); z-index: 100; }
 

@@ -136,7 +136,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 #workshops > .container { position: relative; z-index: 1; }
 
 #support { position: relative; }
-#support::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.52), rgba(0,0,0,0.82)), url('./advice.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.9); z-index: 0; }
+#support::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.78)), url('./advice.png') center top/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.92); z-index: 0; }
 #support > .container { position: relative; z-index: 1; }
 /* Feature cards */
 .feature-cards { padding: 8px 0 26px; }
@@ -158,11 +158,15 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 .detail-pill { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.03); backdrop-filter: saturate(140%) blur(8px); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-pill); padding: 12px 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.35); transition: box-shadow 180ms ease, border-color 180ms ease, background 180ms ease; }
 .detail-pill:hover { border-color: rgba(247,196,0,0.5); box-shadow: var(--glow); }
 .pill-icon { font-size: 18px; color: var(--brand); display: inline-grid; place-items: center; }
+.pill-icon svg { width: 18px; height: 18px; display: block; }
 .pill-label { font-size: 0.86rem; color: var(--muted); }
 .pill-value { font-weight: 700; }
 
 /* Location */
 .location { padding: 14px 0 80px; }
+.location { position: relative; }
+.location::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('./advice.png') center/cover no-repeat; z-index: 0; filter: saturate(110%) contrast(110%) brightness(0.9); }
+.location > .container { position: relative; z-index: 1; }
 .location-card { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; background: linear-gradient(180deg, var(--bg-elev-1), var(--bg-elev-2)); border: 1px solid rgba(255,255,255,0.06); border-radius: 28px; padding: 18px; box-shadow: var(--shadow-soft); }
 .location-text h2 { margin: 0 0 6px; }
 .location-text p { margin: 0 0 10px; color: var(--muted); }

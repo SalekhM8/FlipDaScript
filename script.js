@@ -1,7 +1,16 @@
 // Minimal interactivity
+// Force top on reloads/navigation restore
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.addEventListener('pageshow', () => {
+  window.scrollTo(0, 0);
+});
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-  // always start at top on reload
-  window.scrollTo({ top: 0, behavior: 'instant' });
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

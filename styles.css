@@ -190,7 +190,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
   .hero-sub, .hero-title { text-align: center; margin-left: auto; margin-right: auto; }
   .hero-badges { text-align: center; }
   .hero-curve { display: none; }
-  .hero::before { background: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.64)), url('./mainhero.png') center/cover no-repeat; filter: brightness(0.82); }
+  .hero::before { background: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.64)), url('./mainhero.png') center/cover no-repeat; filter: brightness(0.82); background-size: 100% 100%, 185% auto; background-position: center, center 18%; }
 
 /* Section backgrounds */
 #workshops { position: relative; }

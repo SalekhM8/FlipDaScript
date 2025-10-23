@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // circular orbit animation for hero cards
   const orbitCards = document.querySelectorAll('.hero .card');
   const media = document.querySelector('.hero-media');
-  if (orbitCards.length === 3 && media) {
+  if (orbitCards.length >= 3 && media) {
     let t = 0;
     const radius = Math.min(media.clientWidth, media.clientHeight) * 0.33;
     const centerX = media.clientWidth - 180;
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const step = () => {
       t += speed;
       orbitCards.forEach((el, i) => {
-        const angle = t + (i * (Math.PI * 2 / 3));
+        const angle = t + (i * (Math.PI * 2 / orbitCards.length));
         const x = centerX + radius * Math.cos(angle);
         const y = centerY + radius * Math.sin(angle);
         el.style.left = `${x}px`;

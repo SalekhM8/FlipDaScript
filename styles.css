@@ -92,6 +92,8 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 .btn-primary:hover { background: linear-gradient(180deg, var(--accent), var(--brand)); box-shadow: 0 0 20px rgba(247,196,0,0.55), 0 0 60px rgba(247,196,0,0.25); }
 .btn-ghost { color: var(--text); background: rgba(255,255,255,0.07); box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset; }
 .btn-ghost:hover { background: rgba(255,255,255,0.12); }
+.btn-light { color: #111; background: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.35), 0 0 60px rgba(255,255,255,0.18); }
+.btn-light:hover { background: #f0f0f0; box-shadow: 0 0 24px rgba(255,255,255,0.45), 0 0 70px rgba(255,255,255,0.22); }
 .btn-large { padding: 16px 26px; font-size: 1.05rem; }
 
 .badge { display: inline-block; padding: 8px 12px; background: rgba(255,255,255,0.06); border-radius: var(--radius-pill); margin-right: 8px; color: var(--text); font-weight: 600; }
@@ -121,6 +123,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 .stack-1 { top: 30px; transform: rotate(-2deg) translateY(0); }
 .stack-2 { top: 170px; transform: rotate(1deg) translateY(0); }
 .stack-3 { top: 310px; transform: rotate(-1deg) translateY(0); }
+.stack-4 { top: 380px; right: 40px; transform: rotate(2deg) translateY(0); }
 
 .hero-curve { display: none; height: 0; margin: 0; }
 .section-head { display: grid; gap: 6px; margin: 6px 0 12px; }
@@ -190,7 +193,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
   .hero-sub, .hero-title { text-align: center; margin-left: auto; margin-right: auto; }
   .hero-badges { text-align: center; }
   .hero-curve { display: none; }
-  .hero::before { background: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.64)), url('./mainhero.png') center/cover no-repeat; filter: brightness(0.82); background-size: 100% 100%, 185% auto; background-position: center, center 18%; }
+  .hero::before { background: linear-gradient(rgba(0,0,0,0.64), rgba(0,0,0,0.64)), url('./mainhero.png') center/cover no-repeat; filter: brightness(0.82); background-size: 100% 100%, 185% auto; background-position: center, center 70%; }
 
 /* Section backgrounds */
 #workshops { position: relative; }

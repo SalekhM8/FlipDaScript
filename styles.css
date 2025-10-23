@@ -1,6 +1,6 @@
 /* Shared background for Advice & Support + Location only */
 .support-wrap { position: relative; }
-.support-wrap::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.78)), url('./advice.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.92); z-index: 0; }
+.support-wrap::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.78)), url('./levelupstudio14_inside_a_therapists_office_a_female_therapist_i_f546362b-40bb-4d86-8cd7-1c81f9d55394.png') center/cover no-repeat; background-position: center 35%; filter: saturate(110%) contrast(110%) brightness(0.92); z-index: 0; }
 .support-wrap > section { position: relative; z-index: 1; }
 /*
   Flip Da Script CIC Landing
@@ -134,7 +134,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 
 /* Section backgrounds (all viewports) */
 #workshops { position: relative; }
-#workshops::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.78)), url('./workshop.png') center/cover no-repeat; filter: saturate(110%) contrast(110%) brightness(0.9); z-index: 0; }
+#workshops::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.78)), url('./andypor_photograph_of_a_group_of_real_different_aged_and_colour_ac03f023-b352-4115-aa91-c4da6ea29449.png') center/cover no-repeat; background-position: center 45%; filter: saturate(110%) contrast(110%) brightness(0.9); z-index: 0; }
 #workshops > .container { position: relative; z-index: 1; }
 
 #support { position: relative; }

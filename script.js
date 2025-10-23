@@ -107,7 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // remove after animation completes (1.8s)
     setTimeout(() => {
       splash.remove();
+      document.body.classList.remove('splash-active');
     }, 1850);
+    // add blur class while splash is active
+    document.body.classList.add('splash-active');
   }
 });
 

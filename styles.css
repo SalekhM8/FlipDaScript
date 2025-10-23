@@ -135,7 +135,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .feature-card { background: rgba(255,255,255,0.06); backdrop-filter: saturate(140%) blur(12px); border-radius: 28px; border: 1px solid rgba(255,255,255,0.18); padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.35); transition: box-shadow 220ms ease, transform 220ms ease, border-color 220ms ease, background 220ms ease; }
 .feature-card:hover { border-color: rgba(247,196,0,0.55); box-shadow: var(--glow); transform: translateY(-2px); }
-.feature-card .icon { font-size: 26px; background: rgba(255,255,255,0.08); border-radius: 16px; width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 8px; }
+.feature-card .icon { font-size: 26px; background: rgba(255,255,255,0.08); border-radius: 16px; width: 48px; height: 48px; display: grid; place-items: center; margin: 0 auto 8px; color: var(--brand); }
 .feature-card h3 { margin: 0 0 6px; text-align: center; }
 .feature-card p { margin: 0; color: var(--muted); text-align: center; }
 
@@ -148,7 +148,7 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
 .details-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .detail-pill { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); backdrop-filter: saturate(140%) blur(12px); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-pill); padding: 12px 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.35); transition: box-shadow 180ms ease, border-color 180ms ease, background 180ms ease; }
 .detail-pill:hover { border-color: rgba(247,196,0,0.5); box-shadow: var(--glow); }
-.pill-icon { font-size: 18px; }
+.pill-icon { font-size: 18px; color: var(--brand); display: inline-grid; place-items: center; }
 .pill-label { font-size: 0.86rem; color: var(--muted); }
 .pill-value { font-weight: 700; }
 
@@ -209,11 +209,10 @@ body.splash-active main, body.splash-active header, body.splash-active footer { 
   .hero { padding-top: 72px; padding-bottom: 24px; }
   .hero-title { font-size: 4.6rem; }
   .hero-media { height: 500px; }
-  /* center last row of workshops (5 items) */
+  /* center last row of workshops (5 items): place two items centered under the top row */
   #workshops .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  #workshops .grid-3 > :nth-last-child(-n+2) { grid-column: span 1; }
-  #workshops .grid-3 > :nth-last-child(2) { grid-column: 1 / 2; justify-self: center; }
-  #workshops .grid-3 > :last-child { grid-column: 3 / 4; justify-self: center; }
+  #workshops .grid-3 > :nth-child(4) { grid-column: 2 / 3; justify-self: center; }
+  #workshops .grid-3 > :nth-child(5) { grid-column: 2 / 3; justify-self: center; margin-top: 16px; }
 }
 
 
